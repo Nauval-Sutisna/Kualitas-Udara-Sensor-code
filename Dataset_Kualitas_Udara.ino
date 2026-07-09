@@ -248,11 +248,11 @@ void loop()
     if (Firebase.RTDB.setJSON(&fbdo, "/sensor", &json))
     {
       firebaseFail = 0;
-      // Jika sebelumnya terputus lalu sekarang berhasil
+      
       if (!firebaseConnected)
       {
         firebaseConnected = true;
-        beep(1);   // bunyi sekali
+        beep(1); 
         Serial.println("Firebase Connected");
       }
 
